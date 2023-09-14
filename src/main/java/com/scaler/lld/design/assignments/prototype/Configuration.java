@@ -1,6 +1,6 @@
 package com.scaler.lld.design.assignments.prototype;
 
-public class Configuration {
+public class Configuration implements ClonableObject<Configuration> {
     private String themeColor;
     private Boolean autoSave;
     private String language;
@@ -9,7 +9,8 @@ public class Configuration {
     private String fontFamily;
     private ConfigurationType type;
 
-    public Configuration(String themeColor, Boolean autoSave, String language, Boolean darkMode, Integer fontSize, String fontFamily, ConfigurationType type) {
+    public Configuration(String themeColor, Boolean autoSave, String language, Boolean darkMode, Integer fontSize,
+            String fontFamily, ConfigurationType type) {
         this.themeColor = themeColor;
         this.autoSave = autoSave;
         this.language = language;
@@ -17,6 +18,16 @@ public class Configuration {
         this.fontSize = fontSize;
         this.fontFamily = fontFamily;
         this.type = type;
+    }
+
+    public Configuration(Configuration otherConfig) {
+        this.themeColor = otherConfig.themeColor;
+        this.autoSave = otherConfig.autoSave;
+        this.language = otherConfig.language;
+        this.darkMode = otherConfig.darkMode;
+        this.fontSize = otherConfig.fontSize;
+        this.fontFamily = otherConfig.fontFamily;
+        this.type = otherConfig.type;
     }
 
     public String getThemeColor() {
@@ -46,4 +57,16 @@ public class Configuration {
     public ConfigurationType getType() {
         return type;
     }
+
+    public Configuration cloneObject() {
+        return new Configuration(this);
+    }
+
+    @Override
+    public String toString() {
+        return "Configuration [themeColor=" + themeColor + ", autoSave=" + autoSave + ", language=" + language
+                + ", darkMode=" + darkMode + ", fontSize=" + fontSize + ", fontFamily=" + fontFamily + ", type=" + type
+                + "]";
+    }
+
 }
