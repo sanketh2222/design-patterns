@@ -1,14 +1,12 @@
-package com.scaler.lld.design.creational.parleg;
+package com.scaler.lld.design.creational.abstractfactory.button;
 
-import lombok.AllArgsConstructor;
+import lombok.Getter;
 
-// @AllArgsConstructor
-public class SquareButton extends Button {
-
+@Getter
+public class LightButton extends Button {
     private Double length;
-    private Double border;
 
-        public SquareButton(Double border,Double length) {
+    public LightButton(Double border, Double length) {
         super(border);
         this.length = length;
     }
