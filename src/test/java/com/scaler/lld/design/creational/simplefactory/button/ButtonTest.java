@@ -1,4 +1,4 @@
-package com.scaler.lld.design.creational;
+package com.scaler.lld.design.creational.simplefactory.button;
 
 import com.scaler.lld.design.creational.parleg.*;
 import org.junit.jupiter.api.Test;

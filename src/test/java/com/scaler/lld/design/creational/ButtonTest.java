@@ -24,7 +24,7 @@ public class ButtonTest {
         Button button = ButtonFactory.createButton(
                 ScreenSize.DESKTOP, 10.0, null, 10.0
         );
-
+        
         assertTrue(button instanceof SquareButton,
                 "If the screen size is of a desktop, the btn should be square"
         );
