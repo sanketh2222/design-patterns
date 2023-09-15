@@ -41,4 +41,31 @@ public class DatabaseConfiguration {
     public boolean isReadOnly() {
         return isReadOnly;
     }
+
+    //added setters
+    public void setDatabaseUrl(String databaseUrl) {
+        this.databaseUrl = databaseUrl;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public void setMaxConnections(int maxConnections) {
+        this.maxConnections = maxConnections;
+    }
+
+    public void setEnableCache(boolean enableCache) {
+        this.enableCache = enableCache;
+    }
+
+    public void setReadOnly(boolean isReadOnly) {
+        this.isReadOnly = isReadOnly;
+    }
+
+    
 }
